@@ -63,6 +63,6 @@ app.on('activate', () => {
 });
 
 
-ipcMain.addListener('mierda', (event: IpcMainInvokeEvent) => {
+ipcMain.addListener('someEvent', (event: IpcMainInvokeEvent) => {
   return event.returnValue
 })

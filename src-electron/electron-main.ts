@@ -1,4 +1,4 @@
-import { app, BrowserWindow, nativeTheme } from 'electron';
+import { app, BrowserWindow, nativeTheme, ipcMain, IpcMainInvokeEvent  } from 'electron';
 import path from 'path';
 import os from 'os';
 
@@ -61,3 +61,8 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+
+ipcMain.addListener('mierda', (event: IpcMainInvokeEvent) => {
+  return event.returnValue
+})
